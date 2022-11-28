@@ -10,8 +10,8 @@ const { urlencoded } = require('express');
 const app=express();
 
 //DB config
-const db = require('./config/keys').MongoURI;
-
+require('dotenv').config();
+const db = process.env.MongoURI;
 //Mongo connect 
 mongoose.connect(db,{ useNewUrlParser: true})
 .then(()=> console.log(" Mongo DB Connected"))
