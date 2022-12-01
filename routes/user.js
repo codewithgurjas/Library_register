@@ -65,7 +65,7 @@ router.post('/register', (req, res) => {
                     });
 
                     console.log(newUser);
-                    res.send("hello")
+                    res.send(newUser)
                 }
 
             });
